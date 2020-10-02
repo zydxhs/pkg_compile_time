@@ -4,6 +4,10 @@ version = "0.1.1"
 authors = ["zydxhs <johnsmithcry@163.com>"]
 edition = "2018"
 license = "MIT"
+description = "Provides macros for fetching the package's compile date and time."
+documentation = "https://docs.rs/pkg_compile_time/"
+homepage = "https://docs.rs/pkg_compile_time"
+repository = "https://github.com/zydxhs/pkg_compile_titme"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -11,6 +15,6 @@ license = "MIT"
 proc_macro = true
 
 [dependencies]
-chrono = "*"
-proc-macro2 = "1.*"
-quote = "1.*"
+chrono = "0.4.19"
+proc-macro2 = "1.0.24"
+quote = "1.0.7"
