@@ -20,15 +20,13 @@ use quote::*;
 /// Get the package's compile date.
 #[proc_macro]
 pub fn pkg_compile_date(_input: TokenStream) -> TokenStream {
-    use chrono::Local;
-    let date = Local::now().format("%Y-%m-%d").to_string();
+    let date = time::OffsetDateTime::now_local().format("%Y-%m-%d");
     TokenStream::from(quote!(#date))
 }
 
 /// Get the package's compile time.
 #[proc_macro]
 pub fn pkg_compile_time(_input: TokenStream) -> TokenStream {
-    use chrono::Local;
-    let time = Local::now().format("%H:%M:%S").to_string();
+    let time = time::OffsetDateTime::now_local().format("%H:%M:%S");
     TokenStream::from(quote!(#time))
 }
